@@ -1,0 +1,3 @@
+[console_scripts]
+ip_print = printip.ip_print:main
+

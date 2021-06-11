@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.2 on darwin)" generated="20201009 15:59:37.663" rpa="false">
+<suite id="s1" name="Print Ip Testing" source="/Users/abhay/Desktop/yourarmapplicationtechnicalassessment/assignment/robotframework/print_ip_testing.robot">
+<test id="s1-t1" name="To print ip address of input1.json">
+<kw name="Print Ip" library="IpPrintLibrary">
+<doc>Print the ip from provided ``json`` file.</doc>
+<arguments>
+<arg>../examples/input1.json</arg>
+</arguments>
+<msg timestamp="20201009 15:59:37.691" level="INFO">192.168.101.101  
+192.168.101.70  
+192.168.101.153</msg>
+<status status="PASS" starttime="20201009 15:59:37.691" endtime="20201009 15:59:37.691"></status>
+</kw>
+<kw name="Result Should Be" library="IpPrintLibrary">
+<doc>Verifies that the current result is ``expected``.</doc>
+<arguments>
+<arg>0</arg>
+</arguments>
+<status status="PASS" starttime="20201009 15:59:37.691" endtime="20201009 15:59:37.691"></status>
+</kw>
+<status status="PASS" starttime="20201009 15:59:37.690" endtime="20201009 15:59:37.692" critical="yes"></status>
+</test>
+<test id="s1-t2" name="To print ip address of input2.json">
+<kw name="Print Ip" library="IpPrintLibrary">
+<doc>Print the ip from provided ``json`` file.</doc>
+<arguments>
+<arg>../examples/input2.json</arg>
+</arguments>
+<msg timestamp="20201009 15:59:37.693" level="INFO">192.168.102.33  10.0.0.87
+192.168.103.74  10.0.0.77
+192.168.102.155  10.0.0.99</msg>
+<status status="PASS" starttime="20201009 15:59:37.692" endtime="20201009 15:59:37.693"></status>
+</kw>
+<kw name="Result Should Be" library="IpPrintLibrary">
+<doc>Verifies that the current result is ``expected``.</doc>
+<arguments>
+<arg>0</arg>
+</arguments>
+<status status="PASS" starttime="20201009 15:59:37.693" endtime="20201009 15:59:37.693"></status>
+</kw>
+<status status="PASS" starttime="20201009 15:59:37.692" endtime="20201009 15:59:37.693" critical="yes"></status>
+</test>
+<test id="s1-t3" name="To print ip address if empty.json file is passed">
+<kw name="Print Ip" library="IpPrintLibrary">
+<doc>Print the ip from provided ``json`` file.</doc>
+<arguments>
+<arg>../examples/empty.json</arg>
+</arguments>
+<msg timestamp="20201009 15:59:37.695" level="INFO">Exception: ValueError
+Exception message: Input json don't have ip address.</msg>
+<status status="PASS" starttime="20201009 15:59:37.694" endtime="20201009 15:59:37.695"></status>
+</kw>
+<kw name="Result Should Be" library="IpPrintLibrary">
+<doc>Verifies that the current result is ``expected``.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20201009 15:59:37.695" endtime="20201009 15:59:37.695"></status>
+</kw>
+<status status="PASS" starttime="20201009 15:59:37.693" endtime="20201009 15:59:37.696" critical="yes"></status>
+</test>
+<test id="s1-t4" name="To print ip address if invalid_json.json file is passed">
+<kw name="Print Ip" library="IpPrintLibrary">
+<doc>Print the ip from provided ``json`` file.</doc>
+<arguments>
+<arg>../examples/invalid_json.json</arg>
+</arguments>
+<msg timestamp="20201009 15:59:37.698" level="INFO">Exception: JSONDecodeError
+Exception message: Json file content validation failed.</msg>
+<status status="PASS" starttime="20201009 15:59:37.697" endtime="20201009 15:59:37.698"></status>
+</kw>
+<kw name="Result Should Be" library="IpPrintLibrary">
+<doc>Verifies that the current result is ``expected``.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20201009 15:59:37.698" endtime="20201009 15:59:37.698"></status>
+</kw>
+<status status="PASS" starttime="20201009 15:59:37.696" endtime="20201009 15:59:37.699" critical="yes"></status>
+</test>
+<test id="s1-t5" name="To print ip address if input.txt file is passed">
+<kw name="Print Ip" library="IpPrintLibrary">
+<doc>Print the ip from provided ``json`` file.</doc>
+<arguments>
+<arg>../examples/input.txt</arg>
+</arguments>
+<msg timestamp="20201009 15:59:37.700" level="INFO">Exception: TypeError
+Exception message: Input cli argument is a not valid json file.</msg>
+<status status="PASS" starttime="20201009 15:59:37.700" endtime="20201009 15:59:37.700"></status>
+</kw>
+<kw name="Result Should Be" library="IpPrintLibrary">
+<doc>Verifies that the current result is ``expected``.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20201009 15:59:37.700" endtime="20201009 15:59:37.700"></status>
+</kw>
+<status status="PASS" starttime="20201009 15:59:37.699" endtime="20201009 15:59:37.700" critical="yes"></status>
+</test>
+<test id="s1-t6" name="To print ip address if filename not passed">
+<kw name="Print Ip" library="IpPrintLibrary">
+<doc>Print the ip from provided ``json`` file.</doc>
+<arguments>
+<arg>fdfdf</arg>
+</arguments>
+<msg timestamp="20201009 15:59:37.701" level="INFO">Exception: TypeError
+Exception message: Input cli argument is a not valid json file.</msg>
+<status status="PASS" starttime="20201009 15:59:37.701" endtime="20201009 15:59:37.701"></status>
+</kw>
+<kw name="Result Should Be" library="IpPrintLibrary">
+<doc>Verifies that the current result is ``expected``.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20201009 15:59:37.701" endtime="20201009 15:59:37.702"></status>
+</kw>
+<status status="PASS" starttime="20201009 15:59:37.701" endtime="20201009 15:59:37.702" critical="yes"></status>
+</test>
+<doc>PrintIP test cases using the keyword-driven testing approach.
+
+All tests contain a workflow constructed from keywords in
+``IpPrintLibrary.py``.
+
+The _keyword-driven_ appoach works well for normal test
+automation, but the _gherkin_ style might be even better
+if also business people need to understand tests. If the
+same workflow needs to repeated multiple times, it is best
+to use to the _data-driven_ approach.</doc>
+<status status="PASS" starttime="20201009 15:59:37.664" endtime="20201009 15:59:37.702"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0">Critical Tests</stat>
+<stat pass="6" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" id="s1" name="Print Ip Testing">Print Ip Testing</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
